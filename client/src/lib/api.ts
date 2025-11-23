@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
-const baseURL = import.meta.env.DEV ? "https://localhost:7075/api" : "/api";
+const baseURL = import.meta.env.DEV ? "https://localhost:42069/api" : "/api";
 
 const apiClient: AxiosInstance = axios.create({
   baseURL,

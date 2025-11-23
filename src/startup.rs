@@ -48,7 +48,7 @@ pub fn run(db_pool: PgPool) -> Result<Router, Box<dyn std::error::Error>> {
 
     let app = Router::new()
         .route("/metrics", get(move || ready(metric_handle.render())))
-        .nest("/", routes::get_router())
+        .nest("/api", routes::get_router())
         .layer(
             ServiceBuilder::new()
                 .layer(HandleErrorLayer::new(handle_timeout_error))
