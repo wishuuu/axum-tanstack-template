@@ -10,3 +10,7 @@ args = ["sqlx", "prepare", "--", "--all-targets"]
 [tasks.dto]
 command = "cargo"
 args = ["test", "export_bindings"]
+
+[tasks.front]
+cwd = "client"
+script = ["pnpm i && pnpm run build"]

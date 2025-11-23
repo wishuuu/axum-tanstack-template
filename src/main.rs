@@ -1,5 +1,5 @@
 use axum::serve;
-use project_name::{
+use {{project_name}}::{
     configuration::get_configuration,
     startup::run,
     telemetry::{get_subscriber, init_subscriber},
