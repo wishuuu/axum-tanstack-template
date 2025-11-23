@@ -17,6 +17,7 @@ import reportWebVitals from './reportWebVitals.ts'
 import App from './App.tsx'
 import { AuthLayout } from './layouts/authLayout.tsx'
 import { AppLayout } from './layouts/appLayout.tsx'
+import { LoginScreen } from './routes/login/login.tsx'
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -36,14 +37,16 @@ const indexRoute = createRoute({
 const authLayoutRoute = AuthLayout(rootRoute);
 const appLayoutRoute = AppLayout(rootRoute);
 
+const loginRoute = LoginScreen(authLayoutRoute);
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
-  authLayoutRoute.addChildren([]),
+  authLayoutRoute.addChildren([loginRoute]),
   appLayoutRoute.addChildren([]),
 ])
 
 const TanStackQueryProviderContext = TanStackQueryProvider.getContext()
-const router = createRouter({
+export const router = createRouter({
   routeTree,
   context: {
     ...TanStackQueryProviderContext,
