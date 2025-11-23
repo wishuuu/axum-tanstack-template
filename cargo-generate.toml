@@ -1,5 +1,6 @@
 [template]
 cargo_generate_version = ">=0.9.0"
+exclude = ["*.png", "*.ico"]
 
 [placeholders]
 project_name = { type="string", prompt = "What is name of your project?" }

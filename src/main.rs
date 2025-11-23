@@ -1,5 +1,5 @@
 use axum::serve;
-use axum_tanstack_generate::{
+use project_name::{
     configuration::get_configuration,
     startup::run,
     telemetry::{get_subscriber, init_subscriber},

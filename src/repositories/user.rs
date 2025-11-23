@@ -1,7 +1,7 @@
 use sqlx::PgPool;
 use uuid::Uuid;
 
-use crate::domain::user::User;
+use crate::domain::entities::user::User;
 
 #[derive(Clone)]
 pub struct UserRepository {

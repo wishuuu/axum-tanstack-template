@@ -5,7 +5,7 @@ use argon2::{
 use rand::rngs::OsRng;
 use secrecy::{ExposeSecret, Secret};
 
-use crate::domain::user::User;
+use crate::domain::entities::user::User;
 
 #[derive(Default)]
 pub struct PasswordHashingService {}
@@ -40,7 +40,7 @@ mod tests {
     use passwords::PasswordGenerator;
     use secrecy::Secret;
 
-    use crate::domain::user::User;
+    use crate::domain::entities::user::User;
 
     #[tokio::test]
     async fn hash_and_verify_random_password() {

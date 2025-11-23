@@ -10,7 +10,7 @@ use crate::{
 };
 
 pub fn get_router() -> Router<AppState> {
-    Router::new().route("/login", post(|| async { "Not implemented" }))
+    Router::new().route("/login", post(login_post))
 }
 
 #[derive(Debug, Deserialize)]

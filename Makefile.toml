@@ -1,3 +1,12 @@
+[tasks.dev]
+install_crate = "cargo-watch"
+command = "cargo"
+args = ["watch", "-c", "--ignore", "client", "-x", "run"]
+
 [tasks.sqlx]
 command = "cargo"
 args = ["sqlx", "prepare", "--", "--all-targets"]
+
+[tasks.dto]
+command = "cargo"
+args = ["test", "export_bindings"]
